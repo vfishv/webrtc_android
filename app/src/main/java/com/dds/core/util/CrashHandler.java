@@ -3,12 +3,13 @@ package com.dds.core.util;
 import android.content.Intent;
 import android.util.Log;
 
+import androidx.annotation.NonNull;
+
 import com.dds.App;
 import com.dds.LauncherActivity;
 import com.dds.skywebrtc.CallSession;
 import com.dds.skywebrtc.SkyEngineKit;
 
-import org.jetbrains.annotations.NotNull;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -18,7 +19,7 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
     private static final String TAG = "MyUncaughtExceptionHand";
 
     @Override
-    public void uncaughtException(@NotNull Thread thread, @NotNull Throwable ex) {
+    public void uncaughtException(@NonNull Thread thread, @NonNull Throwable ex) {
         SkyEngineKit gEngineKit = SkyEngineKit.Instance();
         CallSession session = gEngineKit.getCurrentSession();
 
