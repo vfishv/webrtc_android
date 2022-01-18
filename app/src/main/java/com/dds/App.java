@@ -1,6 +1,6 @@
 package com.dds;
 
-import android.app.Application;
+import androidx.multidex.MultiDexApplication;
 
 import com.dds.core.util.CrashHandler;
 import com.dds.core.voip.VoipEvent;
@@ -12,7 +12,7 @@ import com.dds.skywebrtc.SkyEngineKit;
  * Created by dds on 2019/8/25.
  * android_shuai@163.com
  */
-public class App extends Application {
+public class App extends MultiDexApplication {
 
     private static App app;
     private String username = "";
